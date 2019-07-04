@@ -6,7 +6,11 @@
         row.innerHTML = `
             <td>${car.name}</td>
             <td>${car.licence}</td>
-            <td>${car.time}</td>
+            <td>${new Date(car.time)
+                .toLocaleString("pt-BR", {
+                hour: "numeric",
+                minute: "numeric"
+            })}</td>
             <td>
                 <button class="delete">X</button>
             </td>
